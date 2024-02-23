@@ -15,61 +15,56 @@ ul {
 }
 
 
-
-body {
-  background-color: #000;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  background-color: black;
-  height: 190px;
-}
-
-header img {
-  margin: 0 auto;
-}
-
-nav {
-  padding: 1%;
-  margin-block-end: 1%;
-}
-
 main {
   background-color: #fff;
   padding: 2%;
   font-size: 1.15em;
 }
 
-nav ul {
-  list-style-type: none;
-  text-align: center;
-}
-
-nav li {
-  font-size: 1.5em;
-  font-family: Verdana, Arial, sans-serif;
-  border-block-start: 1px solid #fff;
-}
-
-nav li:first-child {
-  border-top: none;
-}
-
-nav li a {
-  display: block;
-  color: #fff;
-  padding: 0.5em 1em;
-  text-decoration: none;
-}
-
+/* Style rule for images */
 img {
   max-width: 100%;
   display: block;
 }
+/* Style rules for header content */
+header {
+  text-align: center;
+  font-size: 1.5em;
+  color: #373684;
+}
+header h1 {
+  font-style: italic;
+}
+
+header img {
+  width: 300px;
+  height: 300px;
+  left: 50%;
+}
+
+/* Style rules for navigation area */
+nav {
+  background-color: #373684;
+}
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+nav li {
+  display: block;
+  border-top: 1px solid #e5e9fc;
+  font-size: 2em;
+}
+nav li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
 
 footer {
+  background-color: #373684;
   font-size: 0.75em;
   text-align: center;
   color: #fff;
@@ -199,17 +194,9 @@ footer p a {
   
   @media screen and (width >=1015px), print {
     header {
-      float: left;
-      width: 25%;
       padding-bottom: 0;
     }
-  
-    nav {
-      float: right;
-      width: 70%;
-      margin: 4em 1em 0 0;
-    }
-  
+
     nav ul {
       text-align: right;
     }
