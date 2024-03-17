@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 body,
 header,
 nav,
@@ -8,7 +12,14 @@ footer,
 h1,
 div,
 img,
-ul {
+ul,
+section,
+figure,
+figcaption,
+aside,
+article,
+table,
+caption {
   margin: 0;
   padding: 0;
   border: 0;
@@ -17,7 +28,7 @@ ul {
 
 main {
   background-color: #fff;
-  padding: 2%;
+  padding: 2rem;
   font-size: 1.15em;
 }
 
@@ -37,9 +48,9 @@ header h1 {
 }
 
 header img {
-  width: 300px;
-  height: 300px;
-  left: 50%;
+  width: 240px;
+  height: auto;
+  margin: 0 auto;
 }
 
 /* Style rules for navigation area */
@@ -76,11 +87,6 @@ footer p a {
   text-decoration: none;
 }
 
-#weights,
-#cardio,
-#training {
-  margin: 0 2%;
-}
 
 #contact {
   text-align: center;
@@ -101,14 +107,6 @@ footer p a {
   border: 8px solid #000;
   width: 95%;
   height: 50%;
-}
-
-.mobile {
-  display: block;
-}
-
-.tablet-desktop {
-  display: none;
 }
 
 .tel-link {
@@ -135,15 +133,174 @@ footer p a {
   border-radius: 8px;
 }
 
-@media screen and (width >=630px), print {
-    .tablet-desktop {
-      display: block;
-    }
-  
-    .mobile {
-      display: none;
-    }
-  
+.grid-container-3 {
+  display: grid;
+  grid-template-columns: 1fr; /* Full width on mobile devices */
+  gap: 1rem;
+  align-items: center;
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: 1fr; /* Full width on mobile devices */
+  gap: 1rem;
+  align-items: center;
+}
+
+figure {
+  background-color: #f9f9f9; /* Light background for each feature */
+  border: 1px solid #ddd; /* Adds a subtle border */
+  padding: 15px; /* Padding inside each figure */
+  text-align: center; /* Centers the text */
+}
+
+figure img {
+  max-width: 250px;
+  height: auto;
+  margin: 0 auto;
+}
+
+figcaption {
+  font-weight: bold; /* Makes figcaption bold */
+  margin-bottom: 10px; /* Adds a margin below the figcaption */
+}
+
+#store-history, #store-mission {
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+#store-history img, #store-mission img {
+  justify-self: center;
+}
+
+#customer-guarantee {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  background: linear-gradient(to right, #ccc, #fff);
+  background-color: #f2f2f2;
+  margin-top: 2%;
+  padding: 1% 2%;
+}
+
+aside {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+caption {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect for rows */
+tr:hover {
+  background-color: #e0e0e0;
+}
+
+form {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button[type="reset"] {
+  background-color: #6c757d;
+}
+
+button[type="reset"]:hover {
+  background-color: #545b62;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+}
+
+select:focus {
+  border-color: #007bff;
+}
+
+
+.inline-flex {
+  display: inline-flex;
+}
+
+@media screen and (width >=630px), print {  
     header {
       position: static;
       padding-bottom: 2%;
@@ -165,23 +322,7 @@ footer p a {
     main ul {
       margin: 0 0 4% 10%;
     }
-  
-    #exercises {
-      border-top: 1px solid #000;
-      border-bottom: 1px solid #000;
-      background: linear-gradient(to right, #ccc, #fff);
-      background-color: #f2f2f2;
-      padding: 1% 2%;
-    }
-  
-    #exercises dt {
-      font-weight: bold;
-    }
-  
-    #exercises dd {
-      padding: 0.5% 1% 2% 0;
-    }
-  
+    
     .tel-num {
       font-size: 1.25em;
     }
@@ -193,12 +334,17 @@ footer p a {
   }
   
   @media screen and (width >=1015px), print {
-    header {
-      padding-bottom: 0;
+
+    .grid-container-3 {
+      grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
     }
 
-    nav ul {
-      text-align: right;
+    .grid-container-2 {
+      grid-template-columns: repeat(2, 1fr); /* Three columns for larger screens */
+    }
+
+    header {
+      padding-bottom: 0;
     }
   
     nav li {
@@ -213,25 +359,11 @@ footer p a {
       color: #000;
       background-color: #fff;
     }
-    main {
-      clear: left;
-    }
   
     main h1 {
       font-size: 1.8em;
     }
-  
-    #weights,
-    #cardio,
-    #training {
-      width: 29%;
-      float: left;
-      margin: 0 2%;
-    }
-  
-    #exercises {
-      clear: left;
-    }
+
   }
   
   @media screen and (width >= 1921px) {

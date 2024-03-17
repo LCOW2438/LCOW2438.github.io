@@ -14,23 +14,24 @@
     <div id="container">
       <!-- Use the header area for the website name or logo -->
       <header>
-        <a href="index.html"><img alt="Lamp Logo" src="./images/switch-on-logo.png" /></a>
+        <a href="index.html"
+          ><img alt="Lamp Logo" src="./images/switch-on-logo.png"
+        /></a>
       </header>
 
       <!-- Use the nav area to add hyperlinks to other pages within the website -->
       <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="specials.html">Specials</a></li>
-            <li><a href="training.html">Training</a></li>
-            <li><a href="media.html">Media</a></li>
-            <li><a href="faqs.html">FAQs</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="specials.html">Specials</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
-    </nav>
-
+      </nav>
 
       <!-- Use the main area to add the main content of the webpage -->
       <main>
@@ -51,6 +52,85 @@
             referrerpolicy="no-referrer-when-downgrade"
             class="map"
           ></iframe>
+
+          <h2>Wanna leave a message?</h2>
+          <!-- Form starts here -->
+          <form>
+            <fieldset>
+              <legend>Contact Information</legend>
+
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+                autofocus
+                size="20"
+              />
+
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+
+              <label for="date">Preferred Contact Date:</label>
+              <input type="date" id="date" name="date" required />
+
+              <label for="feedback">Feedback:</label>
+              <textarea
+                id="feedback"
+                name="feedback"
+                placeholder="Your Feedback"
+                required
+              ></textarea>
+
+              <div>
+                <div class="inline-flex">
+                  <label>You are:</label>
+                  <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="male"
+                  /><label for="male">Male</label>
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                  /><label for="female">Female</label>
+                </div>
+              </div>
+
+              <label for="product">Product Interest:</label>
+              <select id="product" name="product" required>
+                <option value="">--Please choose an option--</option>
+                <option value="Lamps">Lamps</option>
+                <option value="Accessories">Accessories</option>
+              </select>
+
+              <div>
+                <div class="inline-flex">
+                  <label for="newsletter">Subscribe to Newsletter:</label>
+                  <input
+                    type="checkbox"
+                    id="newsletter"
+                    name="newsletter"
+                    value="Yes"
+                  />
+                </div>
+              </div>
+
+              <button type="submit">Submit Request</button>
+              <button type="reset">Reset Form</button>
+            </fieldset>
+          </form>
         </div>
       </main>
 
