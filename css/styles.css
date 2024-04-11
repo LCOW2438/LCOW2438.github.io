@@ -25,7 +25,6 @@ caption {
   border: 0;
 }
 
-
 main {
   background-color: #fff;
   padding: 2rem;
@@ -76,10 +75,9 @@ nav li a {
 
 footer {
   background-color: #373684;
-  font-size: 0.75em;
+  font-size: 1.25em;
   text-align: center;
   color: #fff;
-  padding: 0 1em;
 }
 
 footer p a {
@@ -298,6 +296,41 @@ select:focus {
 
 .inline-flex {
   display: inline-flex;
+}
+
+
+/* Media page specific styles */
+.audio-section, .video-section {
+  margin: 20px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+audio, video {
+  width: 100%; /* Responsive width */
+  max-width: 600px; /* Maximum size to maintain usability */
+  display: block;
+  margin: 0 auto; /* Centering */
+}
+
+section p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-item {
+  flex-grow: 1;
 }
 
 @media screen and (width >=630px), print {  
